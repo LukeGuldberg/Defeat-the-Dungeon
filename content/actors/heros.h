@@ -1,6 +1,7 @@
 #pragma once
 #include "rest.h"
 #include "closedoor.h"
+#include "opendoor.h"
 #include "herotype.h"
 #include "none.h"
 #include "move.h"

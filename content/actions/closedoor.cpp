@@ -1,6 +1,6 @@
-#pragma once
 #include "action.h"
 #include "closedoor.h"
+#include "updatefov.h"
 #include "engine.h"
 #include <iostream>
 
@@ -20,6 +20,7 @@ Result CloseDoor::perform(Engine& engine){
         }
     }
     if (closed_any_doors){
+        engine.events.add(UpdateFOV{});
         return success();
     }else{
         return failure();
