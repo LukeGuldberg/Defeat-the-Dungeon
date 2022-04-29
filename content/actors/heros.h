@@ -1,5 +1,6 @@
 #pragma once
-
+#include "rest.h"
+#include "closedoor.h"
 #include "herotype.h"
 #include "none.h"
 #include "move.h"
@@ -16,7 +17,9 @@ namespace Heros {
     
         {"Down", []() { return std::make_unique<Move>(Vec{0, -1}); } },
     
-        {"Space", []() { return std::make_unique<Move>(Vec{0, 0}); } },
+        {"Space", []() { return std::make_unique<Rest>(); } },
+
+        {"C", []() { return std::make_unique<CloseDoor>(); } }
     };
 
     constexpr int default_speed{8};

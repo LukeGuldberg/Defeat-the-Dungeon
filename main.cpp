@@ -9,4 +9,3 @@ int main() {
     engine.create_hero(Heros::dude);
     engine.run();
 }
-\
