@@ -9,7 +9,7 @@ OpenDoor::OpenDoor(Vec position)
 Result OpenDoor::perform(Engine& engine) {
     bool opened_any_doors {false};
     
-    Tile& tile = engine.dungeon.tiles(position);
+    Tile tile = engine.dungeon.tiles(position);
     if (tile.is_door()) {
         Door& door = engine.dungeon.doors.at(position);
         if (!door.is_open()) {
@@ -22,7 +22,8 @@ Result OpenDoor::perform(Engine& engine) {
     if(opened_any_doors){
         engine.events.add(UpdateFOV{});
         return success();
+    } else{
+        return failure();
     }
-    return failure();
     
 }
