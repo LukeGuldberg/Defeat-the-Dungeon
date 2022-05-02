@@ -8,6 +8,10 @@ int main() {
     Engine engine{settings};
 
     engine.create_hero(Heros::dude);
+    
     engine.create_monster(Monsters::goblin());
+    engine.create_monster(Monsters::necromancer());
+    engine.create_monster(Monsters::muddy());
+
     engine.run();
 }
