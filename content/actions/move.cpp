@@ -2,6 +2,7 @@
 #include "actor.h"
 #include "engine.h"
 #include "opendoor.h"
+#include "rest.h"
 
 Move::Move(Vec direction)
     :direction{direction}{}
@@ -12,8 +13,12 @@ Result Move::perform(Engine& engine){
     
     actor->change_direction(direction);
 
-    if(tile.is_wall() || tile.actor) {
+    if(tile.is_wall()){
         return failure();
+    }
+
+    if (tile.actor){
+        return alternative(Attack(*actor, *tile.actor));
     }
     if(tile.is_door()){
         Door& door = engine.dungeon.doors.at(new_position);

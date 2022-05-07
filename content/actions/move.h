@@ -2,6 +2,7 @@
 
 #include "action.h"
 #include "vec.h"
+#include "attack.h"
 
 class Move : public Action {
 public:

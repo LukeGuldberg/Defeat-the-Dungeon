@@ -1,5 +1,8 @@
 add_library(weapons
   none.cpp
+  staff.cpp
+  hammer.cpp
+  knife.cpp
   )
 
 target_include_directories(weapons PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
