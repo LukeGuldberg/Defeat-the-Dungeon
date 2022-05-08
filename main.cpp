@@ -12,6 +12,11 @@ int main() {
     engine.create_monster(Monsters::goblin());
     engine.create_monster(Monsters::necromancer());
     engine.create_monster(Monsters::muddy());
+    engine.create_monster(Monsters::muddy());
+    engine.create_monster(Monsters::muddy());
+    engine.create_monster(Monsters::muddy());
+    engine.create_monster(Monsters::muddy());
+    engine.create_monster(Monsters::muddy());
 
     engine.run();
 }
