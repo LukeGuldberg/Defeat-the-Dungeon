@@ -4,7 +4,7 @@ Attack::Attack(Actor& attacker, Actor& defender)
     :attacker{attacker}, defender{defender}{}
 
 Result Attack::perform(Engine& engine){
-    if (defender.team == 0){
+    if (attacker.team != defender.team){
         attacker.attack(defender);
         return success();
     }else{
