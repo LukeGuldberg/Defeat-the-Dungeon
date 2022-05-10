@@ -6,4 +6,5 @@ Staff::Staff(int damage)
 void Staff::use(Engine& engine, Actor& attacker, Actor& defender){
     Vec direction = defender.get_position() - attacker.get_position();
     engine.events.add(Swing{sprite, direction, defender, damage});
+    //engine.events.add(Hit{defender, damage});
 }
