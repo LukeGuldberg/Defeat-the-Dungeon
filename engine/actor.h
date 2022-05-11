@@ -32,6 +32,7 @@ protected:
 
 public:
     // health gets reduced by calling take damage
+    const int max_health;
     int health;
     bool alive;
 

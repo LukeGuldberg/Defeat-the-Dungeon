@@ -6,6 +6,7 @@
 #include "none.h"
 #include "move.h"
 #include "staff.h"
+#include "bowattack.h"
 
 namespace Heros {
     using Reaction = std::function<std::unique_ptr<Action>()>;
@@ -21,7 +22,9 @@ namespace Heros {
     
         {"Space", []() { return std::make_unique<Rest>(); } },
 
-        {"C", []() { return std::make_unique<CloseDoor>(); } }
+        {"C", []() { return std::make_unique<CloseDoor>(); } },
+
+        {"Enter", []() { return std::make_unique<BowAttack>(); } }
     };
 
     constexpr int default_speed{8};

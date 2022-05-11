@@ -4,7 +4,7 @@
 
 Actor::Actor(Engine& engine, const Vec& position, int health, int team, int speed)
     :engine{engine}, position{position}, direction{1, 0},
-     health{health}, alive{true}, team{team}, speed{speed}, energy{0} {
+     health{health}, alive{true}, team{team}, speed{speed}, energy{0}, max_health{health} {
     
     // place actor onto its dungeon tile
     Tile& tile = engine.dungeon.tiles(position);
