@@ -8,15 +8,16 @@
 
 class Shoot : public Event {
 public: 
-    Shoot(Sprite& sprite, Sprite& projectile, Vec direction, Actor& defender, int damage);
+    Shoot(Sprite& sprite, Vec direction, int damage, Vec start_pos, Vec end_pos);
     void execute(Engine& engine) override;
     void when_done(Engine& engine) override;
 private:
-    Sprite& sprite;
-    Sprite& projectile;
-    Sprite copy;
-    Actor& defender;
+    Sprite& weapon;
+    Vec direction;
     int damage;
-
-    double starting_angle, delta;
-};
+    Vec start_pos, end_pos;
+    double starting_angle;
+    Vec position;
+    Sprite projectile;
+    double projectile_angle;
+    };

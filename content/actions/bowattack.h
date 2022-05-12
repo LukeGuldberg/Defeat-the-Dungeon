@@ -5,9 +5,7 @@
 
 class BowAttack : public Action{
 public:
-    BowAttack(Actor&, Actor&);
+    BowAttack();
     Result perform(Engine& engine) override;
 private:
-    Actor& attacker;
-    Actor& defender;
 };

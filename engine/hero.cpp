@@ -9,7 +9,7 @@ constexpr double WEAPON_ANGLE = 20;
 Hero::Hero(Engine& engine, HeroType type, const Vec& position)
     :Actor{engine, position, type.max_health, TEAM_HERO, type.speed}, type{type} {
     move_to(position);
-    sprite = engine.graphics.get_animated_sprite(type.name, 1);
+    sprite = engine.graphics.get_animated_sprite(type.name, 1, true);
     type.weapon->sprite = engine.graphics.get_sprite(type.weapon->name);
     type.weapon->sprite.shift.x = sprite.get_sprite().size.x/8;
     type.weapon->sprite.angle = WEAPON_ANGLE;
@@ -35,6 +35,10 @@ void Hero::move_to(const Vec& new_position) {
     Actor::move_to(new_position);
     engine.dungeon.update_visibility(position);
     engine.camera.move_to(position);
+}
+
+std::shared_ptr<Weapon> Hero::get_weapon() const {
+    return type.weapon;
 }
 
 void Hero::attack(Actor& defender) {

@@ -15,7 +15,7 @@ public:
 
     // place hero at given position
     void move_to(const Vec& position) override;
-
+    std::shared_ptr<Weapon> get_weapon() const override;
     void attack(Actor& defender) override;
     void update() override;
     std::unique_ptr<Action> take_turn() override;

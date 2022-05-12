@@ -14,6 +14,7 @@ public:
 
     // orient monster towards direction
     void change_direction(const Vec& direction) override;
+    std::shared_ptr<Weapon> get_weapon() const override;
     void attack(Actor& defender) override;
     void update() override;
     std::unique_ptr<Action> take_turn() override;

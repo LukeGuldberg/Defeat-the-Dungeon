@@ -7,6 +7,7 @@
 // forward declarations
 class Engine;
 class Action;
+class Weapon;
 
 
 // base class for all interacting beings
@@ -19,6 +20,7 @@ public:
     const Vec& get_position() const;
     bool is_visible() const;
 
+    virtual std::shared_ptr<Weapon> get_weapon() const = 0;
     void take_damage(int amount);
     virtual void attack(Actor& defender) = 0;
     
@@ -28,9 +30,10 @@ public:
 
 protected:
     Engine& engine;
-    Vec position, direction;
+    Vec position;
 
 public:
+    Vec direction;
     // health gets reduced by calling take damage
     const int max_health;
     int health;
