@@ -25,12 +25,12 @@ namespace Heros {
 
         {"C", []() { return std::make_unique<CloseDoor>(); } },
 
-        {"B", []() { return std::make_unique<BowAttack>(); } }
+        {"B", []() { return std::make_unique<BowAttack>(); } } //shoots the arrow
     };
 
     constexpr int default_speed{8};
     const HeroType nobody{"none", default_speed, 1, std::make_shared<None>(), {}};
-    //const HeroType dude{"wizard", default_speed, 10, std::make_shared<Staff>(2), {key_bindings}};
-    const HeroType bro{"elf", default_speed, 10, std::make_shared<Bow>(4), {key_bindings}};
+    const HeroType dude{"wizard", default_speed, 15, std::make_shared<Staff>(4), {key_bindings}};
+    const HeroType bro{"elf", default_speed, 15, std::make_shared<Bow>(4), {key_bindings}};
     
 }

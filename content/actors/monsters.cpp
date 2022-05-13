@@ -8,7 +8,9 @@
 #include "move.h"
 #include "knife.h"
 #include "hammer.h"
+#include "sword_big.h"
 #include "staff.h"
+#include "spear.h"
 namespace Monsters {
     std::unique_ptr<Action> default_behavior(Engine& engine, Monster& me){
         if (me.is_visible() && engine.hero) {
@@ -41,5 +43,17 @@ namespace Monsters {
         int health = 3;
         return {"muddy", default_speed, health, std::make_shared<Hammer>(2), default_behavior};
     }
-
+    MonsterType demon_big(){
+        int health = 5;
+        return {"demon_big", default_speed, health, std::make_shared<Sword_Big>(4), default_behavior};
+    }
+    MonsterType zombie_big(){
+        int health = 5;
+        return {"zombie_big", default_speed, health, std::make_shared<Sword_Big>(4), default_behavior};
+    }
+    MonsterType ogre(){
+        int health = 5;
+        return {"ogre", default_speed, health, std::make_shared<Spear>(3), default_behavior};
+    }
 }
+  

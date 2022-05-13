@@ -9,5 +9,8 @@ namespace Monsters {
     MonsterType goblin();
     MonsterType necromancer();
     MonsterType muddy();
+    MonsterType demon_big();
+    MonsterType zombie_big();
+    MonsterType ogre();
 
 }

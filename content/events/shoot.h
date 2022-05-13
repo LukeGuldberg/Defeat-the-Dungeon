@@ -15,7 +15,7 @@ private:
     Sprite& weapon;
     Vec direction;
     int damage;
-    Vec start_pos, end_pos;
+    Vec start_pos, end_pos; //first and last position that the animation will appear
     double starting_angle;
     Vec position;
     Sprite projectile;
