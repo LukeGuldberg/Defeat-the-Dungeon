@@ -1,4 +1,4 @@
-#Defeat the Dungeon
+# Defeat the Dungeon
  ![ScreenShot](defeatthedungeon1.png) 
  ![ScreenShot](defeatthedungeon2.png)
 Using a game engine written by WLC professors, I created a dungeon crawl game. The game features an archer who is able to navigate (arrow keys) the randomly generated map, open and close doors (c to close), and avoid or fight monsters.
