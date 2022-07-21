@@ -1,9 +1,10 @@
 # Defeat the Dungeon
- ![ScreenShot](defeatthedungeon1.png) 
- ![ScreenShot](defeatthedungeon2.png)
+
 Using a game engine written by WLC professors, I created a dungeon crawl game. The game features an archer who is able to navigate (arrow keys) the randomly generated map, open and close doors (c to close), and avoid or fight monsters.
 The archer can fire an arrow in any direction (press b), dealing damage to monsters, and also melees with her bow when close to monsters. Monsters and heroes are programmed to show swing animations when attacking. Monsters are also programmed to pursue the player when visible, and randomly roam the map when the player is not visible.
 
+![ScreenShot](defeatthedungeon1.png) 
+![ScreenShot](defeatthedungeon2.png)
 
 # Game for CSC-231
 This code serves as the final project for CSC 231 Software
